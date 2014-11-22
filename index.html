@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="profix">
+<head>
+	<meta charset="UTF-8">
+	<title>Profix</title>
+	<!-- bootstrap styles -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	
+	<!-- jQuery 1.11.1 -->
+	<script src='js/jquery-1.11.1.min.js'></script>
+
+	<!-- custom adds -->
+	<link rel="stylesheet" href="css/customs.css">
+	<script src="js/customs.js"></script>
+
+	<!-- bootstrap js -->
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- Angular js -->
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-resource.min.js"></script>
+	<script src="js/angular-route.min.js"></script>
+	<script src="js/angular-animate.min.js"></script>
+	<script src="js/angular-sanitize.min.js"></script>
+
+	<!-- bootstrapping angular -->
+	<script src="js/app.js"></script>
+	<script src="js/controllers.js"></script>
+	<script src="js/services.js"></script>
+
+	<!-- special controllers -->
+	<script src="js/controllers/orders.js"></script>
+	<script src="js/ui-bootstrap-tpls-0.11.0.min.js"></script>
+
+</head>
+<body>
+	<div class="container">
+		<div class="row"><h1 class="logo">Profix</h1></div>
+		<div class="col-md-2 sidebar" ng-controller="SidebarCtrl">
+			<h4>{{title}}</h4>
+			<ul>
+				<li ng-repeat="acceso in accesos">
+					<a href="#{{acceso.url}}">{{acceso.name}}</a>
+				</li>
+			</ul>
+		</div>
+		<div class="col-md-10" ng-view>
+		</div>
+	</div>
+</body>
+</html>
